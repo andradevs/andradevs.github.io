@@ -6,11 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guilherme Andrade</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" </head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script type="text/javascript" src="fullpage.js"></script>
+    <link rel="stylesheet" type="text/css" href="fullpage.css" />
+</head>
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <nav class="navbar sticky-top navbar-expand-md navbar-light bg-info">
             <a class="navbar-brand" href="#">
                 <img src="./src/assets/images/akira-pill-png-18-original.png" width="50" height="50"
                     class="d-inline-block align-top" alt="home">
@@ -23,20 +26,59 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Projetos</a>
+                        <a class="nav-link" href="#projects">Projetos</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
-    <div class="content" style="width:100vw; height: 80vh;">
-        <div class="div-img">
-            <img class="img-fluid" src="./src/assets/images/akira-pill-png-18-original.png" alt="">
+    <div id="fullpage">
+        <div class="section active">
+            <div id="home" class="div-title">
+                <span>Olá, eu sou o Guilherme👋</span>
+                <br>
+                <br>
+                <p>
+                    Desenvolvedor Fullstack especializado em desenvolvimento WEB, com experiência
+                    em Frameworks baseados em Javascript e ASP.NET. Aluno do 9° período do curso de
+                    Sistemas de Informação pela Universidade Federal Rural do Rio de Janeiro (UFRRJ).
+                </p>
+            </div>
         </div>
-        <span class="message">Em desenvolvimento</span>
+        <div id="projects" class="section">
+            <div class="projects-div">
+                <span>Projetos</span>
+                <div class="projects-cards container-fluid">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="./src/assets/images/akira-pill-png-18-original.png"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="./src/assets/images/akira-pill-png-18-original.png"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="./src/assets/images/akira-pill-png-18-original.png"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 <script src="script.js"></script>
@@ -49,5 +91,10 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
+<script type="text/javascript">
+    var myFullpage = new fullpage('#fullpage', {
+        sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff']
+    });
+</script>
 
 </html>
